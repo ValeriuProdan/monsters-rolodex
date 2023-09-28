@@ -5,12 +5,10 @@ import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 
 const App = () => {
-  console.log("App");
 
   const [searchField, setSearchField] = useState('');
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
-  //console.log(searchField);
 
   const getUsers = async () => {
     try {
@@ -24,7 +22,6 @@ const App = () => {
   }
 
   useEffect(() => {
-    console.log("useEffect");
     getUsers();
   }, []);
 
